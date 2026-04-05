@@ -1,0 +1,4 @@
+google-adk==1.13
+uvicorn
+fastapi
+google-genai

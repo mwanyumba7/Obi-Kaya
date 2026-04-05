@@ -17,7 +17,7 @@ def generate_recommendations_from_input(user_text: str, goal_or_request: Optiona
     - Event Ideas & Timing
     - Social Media Strategy
     - Ongoing Engagement (Beyond Events)
-    Uses Gemini 2.0 to:
+    Uses gemini-2.5-flash-lite to:
     - Reference community data, trends, and best practices
     - Phrase each suggestion as an actionable plan, referencing data and best practices
     Returns a dict with status and recommendations (organized by category)
@@ -40,7 +40,7 @@ def generate_recommendations_from_input(user_text: str, goal_or_request: Optiona
     )
     try:
         response = client.models.generate_content(
-            model = "gemini-2.0-flash",
+            model = "gemini-2.5-flash-lite",
             contents = prompt
         )
         try:
@@ -92,7 +92,7 @@ def generate_partnership_pitch(user_text: str, goal_or_request: Optional[str] = 
     )
     try:
         response = client.models.generate_content(
-            model = "gemini-2.0-flash",
+            model = "gemini-2.5-flash-lite",
             contents = prompt
         )
         try:
@@ -137,7 +137,7 @@ Question:
 {question}
 """
         response = client.models.generate_content(
-            model = "gemini-2.0-flash",
+            model = "gemini-2.5-flash-lite",
             contents = prompt
         )
         return {
@@ -156,7 +156,7 @@ Question:
 
 root_agent = Agent(
     name="obi_kaya_agent",
-    model="gemini-2.0-flash-exp",
+    model="gemini-2.5-flash-lite",
     description=(
         "Smart Community Assistant Agent: Empowers community organizers/managers or anyone in DevRel, especially in Sub-Saharan Africa, "
         "to maximize their community's impact, secure partnerships, and sustain engagement. The agent analyzes community data, "
