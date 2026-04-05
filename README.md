@@ -115,6 +115,14 @@ The agent is defined in `agent.py` using the `Agent` class from `google.adk.agen
 2. Open your browser and go to the URL provided (usually http://localhost:8080).
 3. Select your agent (`obi_kaya_agent`) and interact with it using the web interface.
 
+### 5. 🛠️  Troubleshooting & Quick Fixes
+1. Allow Cross-Origin Requests (CORS)
+If you are running the agent in Google Cloud Shell or accessing it via a public IP (you can notice it by the 105.x.x.x IP in your logs ), the server likely blocks the request because the "Origin" doesn't match localhost.
+
+Try running the command with the --allow_origins flag set to wildcard:
+
+`adk web --allow_origins "*"`
+
 ## Example Usage
 
 - **Get recommendations:** Upload a PDF report or paste community data, and ask for event or engagement ideas.
