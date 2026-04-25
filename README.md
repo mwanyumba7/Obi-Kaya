@@ -1,5 +1,5 @@
 <div align="center">
-
+ 
 # 🌐👥 Obi Kaya
 
 ### *Your Smart Community Assistant*
